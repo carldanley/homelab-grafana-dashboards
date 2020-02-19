@@ -17,7 +17,7 @@
   "gnetId": 11001,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1582079399507,
+  "iteration": 1582083983706,
   "links": [],
   "panels": [
     {
@@ -77,7 +77,7 @@
         {
           "alias": "Time Left",
           "align": "auto",
-          "colorMode": null,
+          "colorMode": "cell",
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -88,7 +88,10 @@
           "mappingType": 1,
           "pattern": "Value",
           "preserveFormat": false,
-          "thresholds": [],
+          "thresholds": [
+            "2592000",
+            "5184000"
+          ],
           "type": "number",
           "unit": "dtdurations"
         },
@@ -105,7 +108,10 @@
           "decimals": 2,
           "mappingType": 1,
           "pattern": "namespace",
-          "thresholds": [],
+          "thresholds": [
+            "2592000",
+            "5184000"
+          ],
           "type": "string",
           "unit": "short"
         },
@@ -1222,7 +1228,7 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -1279,5 +1285,5 @@
   "timezone": "browser",
   "title": "Cert-Manager",
   "uid": "u6M5igpWk",
-  "version": 2
+  "version": 3
 }
