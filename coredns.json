@@ -17,7 +17,7 @@
   "gnetId": 7279,
   "graphTooltip": 0,
   "id": 6,
-  "iteration": 1582078557044,
+  "iteration": 1582079091313,
   "links": [
     {
       "icon": "external link",
@@ -1326,8 +1326,8 @@
   "schemaVersion": 22,
   "style": "dark",
   "tags": [
-    "dns",
-    "coredns"
+    "CoreDNS",
+    "DNS"
   ],
   "templating": {
     "list": [
@@ -1335,7 +1335,6 @@
         "allValue": ".*",
         "current": {
           "selected": false,
-          "tags": [],
           "text": "All",
           "value": "$__all"
         },
@@ -1361,7 +1360,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
@@ -1393,5 +1392,5 @@
   "timezone": "browser",
   "title": "CoreDNS",
   "uid": "2XyV79Kiz",
-  "version": 2
+  "version": 3
 }

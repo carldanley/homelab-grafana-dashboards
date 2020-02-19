@@ -13,9 +13,10 @@
     ]
   },
   "description": "Etcd Dashboard",
-  "editable": false,
+  "editable": true,
   "gnetId": 3070,
   "graphTooltip": 0,
+  "id": 2,
   "links": [],
   "panels": [
     {
@@ -1864,7 +1865,9 @@
   "refresh": "10s",
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "Etcd"
+  ],
   "templating": {
     "list": []
   },

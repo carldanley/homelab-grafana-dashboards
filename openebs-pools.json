@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1582077291318,
+  "iteration": 1582079117402,
   "links": [],
   "panels": [
     {
@@ -1037,13 +1037,15 @@
   "refresh": "10s",
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "OpenEBS",
+    "Pools"
+  ],
   "templating": {
     "list": [
       {
         "allValue": null,
         "current": {
-          "selected": true,
           "text": "cstor-disk-pool",
           "value": "cstor-disk-pool"
         },
@@ -1069,9 +1071,8 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "cstor-disk-pool-y7af",
-          "value": "cstor-disk-pool-y7af"
+          "text": "cstor-disk-pool-7fwj",
+          "value": "cstor-disk-pool-7fwj"
         },
         "datasource": "Prometheus",
         "definition": "label_values(openebs_replica_status, openebs_io_cstor_pool)",
@@ -1126,5 +1127,5 @@
   "timezone": "",
   "title": "OpenEBS Pools",
   "uid": "JaXeyhjiz",
-  "version": 4
+  "version": 5
 }

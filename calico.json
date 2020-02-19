@@ -13,10 +13,9 @@
     ]
   },
   "description": "Calico cluster monitoring dashboard",
-  "editable": false,
+  "editable": true,
   "gnetId": 3244,
   "graphTooltip": 0,
-  "id": 10,
   "links": [],
   "panels": [
     {
@@ -1327,7 +1326,8 @@
   "schemaVersion": 22,
   "style": "dark",
   "tags": [
-    "calico"
+    "Calico",
+    "CNI"
   ],
   "templating": {
     "list": []
@@ -1364,5 +1364,5 @@
   "timezone": "",
   "title": "Calico",
   "uid": "vSH2O7Nmk",
-  "version": 2
+  "version": 1
 }

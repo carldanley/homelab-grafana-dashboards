@@ -18,7 +18,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 5,
-  "iteration": 1582077244259,
+  "iteration": 1582079025463,
   "links": [],
   "panels": [
     {
@@ -593,7 +593,10 @@
   "refresh": "10s",
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "OpenEBS",
+    "Volumes"
+  ],
   "templating": {
     "list": [
       {
@@ -655,5 +658,5 @@
   "timezone": "",
   "title": "OpenEBS Volumes",
   "uid": "_2ASd0wZz",
-  "version": 3
+  "version": 4
 }
