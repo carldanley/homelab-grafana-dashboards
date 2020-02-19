@@ -1322,7 +1322,7 @@
       }
     }
   ],
-  "refresh": false,
+  "refresh": "10s",
   "schemaVersion": 22,
   "style": "dark",
   "tags": [
@@ -1361,7 +1361,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1390,8 +1390,8 @@
       "30d"
     ]
   },
-  "timezone": "utc",
+  "timezone": "browser",
   "title": "CoreDNS",
   "uid": "2XyV79Kiz",
-  "version": 1
+  "version": 2
 }
