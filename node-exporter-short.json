@@ -17,7 +17,7 @@
   "gnetId": 11074,
   "graphTooltip": 0,
   "id": 13,
-  "iteration": 1582085591454,
+  "iteration": 1582085880181,
   "links": [],
   "panels": [
     {
@@ -2119,6 +2119,7 @@
       {
         "allValue": null,
         "current": {
+          "selected": true,
           "text": "kubernetes-service-endpoints",
           "value": "kubernetes-service-endpoints"
         },
@@ -2144,14 +2145,15 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "text": "k8s-master-1",
+          "value": [
+            "k8s-master-1"
+          ]
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{job=~\"$job\"}, nodename)",
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": "Host",
         "multi": true,
         "name": "hostname",
@@ -2225,7 +2227,7 @@
         "allValue": null,
         "current": {
           "isNone": true,
-          "selected": false,
+          "selected": true,
           "text": "None",
           "value": ""
         },
@@ -2253,10 +2255,10 @@
         "allFormat": "glob",
         "allValue": "",
         "current": {
-          "isNone": true,
-          "selected": false,
           "text": "None",
-          "value": ""
+          "value": [
+            ""
+          ]
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_exporter_build_info{env=~'$env'},name)",
@@ -2311,7 +2313,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Node Exporter",
+  "title": "Node Exporter (Short)",
   "uid": "hb7fSE0Zz",
-  "version": 2
+  "version": 5
 }
