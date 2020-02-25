@@ -17,8 +17,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 5,
-  "iteration": 1582079025463,
+  "iteration": 1582609465675,
   "links": [],
   "panels": [
     {
@@ -87,6 +86,7 @@
           "expr": "openebs_volume_uptime{job=\"kubernetes-pods\", openebs_io_persistent_volume_claim=~\"$OpenEBS\"}/60",
           "format": "time_series",
           "hide": false,
+          "instant": true,
           "intervalFactor": 2,
           "refId": "A",
           "step": 30
@@ -171,6 +171,7 @@
           "expr": "openebs_size_of_volume{openebs_io_persistent_volume_claim=~\"$OpenEBS\"}",
           "format": "time_series",
           "hide": false,
+          "instant": true,
           "intervalFactor": 2,
           "legendFormat": "",
           "refId": "A",
@@ -255,6 +256,7 @@
         {
           "expr": "openebs_actual_used{openebs_io_persistent_volume_claim=~\"$OpenEBS\"}",
           "format": "time_series",
+          "instant": true,
           "intervalFactor": 1,
           "refId": "A",
           "step": 15
@@ -602,6 +604,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "prometheus-server",
           "value": "prometheus-server"
         },
@@ -658,5 +661,5 @@
   "timezone": "",
   "title": "OpenEBS Volumes",
   "uid": "_2ASd0wZz",
-  "version": 4
+  "version": 1
 }
