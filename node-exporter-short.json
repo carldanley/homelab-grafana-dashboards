@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": 11074,
   "graphTooltip": 0,
-  "id": 13,
-  "iteration": 1582085880181,
+  "iteration": 1582640054522,
   "links": [],
   "panels": [
     {
@@ -2059,7 +2058,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "node_hwmon_temp_celsius{instance=~'$node'}",
+          "expr": "(node_hwmon_temp_celsius{instance=~'$node'}*9/5)+32",
           "format": "time_series",
           "intervalFactor": 10,
           "legendFormat": "{{instance}}_{{chip}}_{{sensor}}",
@@ -2086,7 +2085,7 @@
       },
       "yaxes": [
         {
-          "format": "celsius",
+          "format": "fahrenheit",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2108,7 +2107,7 @@
       }
     }
   ],
-  "refresh": "10s",
+  "refresh": "5s",
   "schemaVersion": 22,
   "style": "dark",
   "tags": [
@@ -2145,9 +2144,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "k8s-master-1",
+          "text": "DS918",
           "value": [
-            "k8s-master-1"
+            "DS918"
           ]
         },
         "datasource": "Prometheus",
@@ -2200,8 +2199,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "/",
-          "value": "/"
+          "text": "/rootfs",
+          "value": "/rootfs"
         },
         "datasource": "Prometheus",
         "definition": "",
@@ -2315,5 +2314,5 @@
   "timezone": "browser",
   "title": "Node Exporter (Short)",
   "uid": "hb7fSE0Zz",
-  "version": 5
+  "version": 1
 }
