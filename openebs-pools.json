@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
-  "iteration": 1582079117402,
+  "iteration": 1582614459337,
   "links": [],
   "panels": [
     {
@@ -194,7 +193,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "openebs_rebuild_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_rebuild_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -306,7 +305,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "openebs_total_rebuild_done{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_rebuild_done{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -534,7 +533,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "openebs_volume_replica_used_size{name=~\".*pvc.*\", openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}/(1024*1024*1024)",
+          "expr": "openebs_volume_replica_used_size{name=~\".*pvc.*\", openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", name=~\".*/$Volume\"}/(1024*1024*1024)",
           "refId": "B"
         }
       ],
@@ -608,7 +607,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -705,7 +704,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "openebs_total_failed_rebuild{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_failed_rebuild{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -761,21 +760,21 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "openebs_total_write_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_write_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Write",
           "refId": "A"
         },
         {
-          "expr": "openebs_total_read_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_read_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Read",
           "refId": "B"
         },
         {
-          "expr": "openebs_sync_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_sync_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Sync",
@@ -866,21 +865,21 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(openebs_write_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])/increase(openebs_write_block_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])",
+          "expr": "increase(openebs_write_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])/increase(openebs_write_block_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Write",
           "refId": "A"
         },
         {
-          "expr": "increase(openebs_read_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])/increase(openebs_read_block_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])",
+          "expr": "increase(openebs_read_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])/increase(openebs_read_block_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Read",
           "refId": "B"
         },
         {
-          "expr": "increase(openebs_sync_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])/increase(openebs_sync_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}[2m])",
+          "expr": "increase(openebs_sync_latency{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])/increase(openebs_sync_count{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Sync",
@@ -971,21 +970,21 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "openebs_total_write_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_write_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Write",
           "refId": "A"
         },
         {
-          "expr": "openebs_total_read_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_total_read_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Read",
           "refId": "B"
         },
         {
-          "expr": "openebs_rebuild_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}",
+          "expr": "openebs_rebuild_bytes{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\", vol=\"$Volume\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Rebuild",
@@ -1046,6 +1045,7 @@
       {
         "allValue": null,
         "current": {
+          "selected": true,
           "text": "cstor-disk-pool",
           "value": "cstor-disk-pool"
         },
@@ -1071,8 +1071,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "cstor-disk-pool-7fwj",
-          "value": "cstor-disk-pool-7fwj"
+          "selected": true,
+          "text": "cstor-disk-pool-07l2",
+          "value": "cstor-disk-pool-07l2"
         },
         "datasource": "Prometheus",
         "definition": "label_values(openebs_replica_status, openebs_io_cstor_pool)",
@@ -1092,11 +1093,53 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3",
+          "value": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}, vol)",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Volume",
+        "options": [
+          {
+            "selected": false,
+            "text": "pvc-4282dd8e-e439-45a9-83bd-7922b679de42",
+            "value": "pvc-4282dd8e-e439-45a9-83bd-7922b679de42"
+          },
+          {
+            "selected": false,
+            "text": "pvc-e31918d7-7e09-4e1f-972d-6b2d861533d9",
+            "value": "pvc-e31918d7-7e09-4e1f-972d-6b2d861533d9"
+          },
+          {
+            "selected": true,
+            "text": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3",
+            "value": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3"
+          }
+        ],
+        "query": "label_values(openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}, vol)",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
       }
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -1127,5 +1170,5 @@
   "timezone": "",
   "title": "OpenEBS Pools",
   "uid": "JaXeyhjiz",
-  "version": 5
+  "version": 1
 }
