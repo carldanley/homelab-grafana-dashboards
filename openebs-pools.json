@@ -15,7 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1582614459337,
+  "id": 8,
+  "iteration": 1582943260770,
   "links": [],
   "panels": [
     {
@@ -1044,15 +1045,11 @@
     "list": [
       {
         "allValue": null,
-        "current": {
-          "selected": true,
-          "text": "cstor-disk-pool",
-          "value": "cstor-disk-pool"
-        },
+        "current": {},
         "datasource": "Prometheus",
         "definition": "label_values(openebs_pool_status, openebs_io_storage_pool_claim)",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": null,
         "multi": false,
         "name": "Pool",
@@ -1070,11 +1067,7 @@
       },
       {
         "allValue": null,
-        "current": {
-          "selected": true,
-          "text": "cstor-disk-pool-07l2",
-          "value": "cstor-disk-pool-07l2"
-        },
+        "current": {},
         "datasource": "Prometheus",
         "definition": "label_values(openebs_replica_status, openebs_io_cstor_pool)",
         "hide": 0,
@@ -1096,11 +1089,7 @@
       },
       {
         "allValue": null,
-        "current": {
-          "selected": true,
-          "text": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3",
-          "value": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3"
-        },
+        "current": {},
         "datasource": "Prometheus",
         "definition": "label_values(openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}, vol)",
         "hide": 0,
@@ -1108,23 +1097,7 @@
         "label": null,
         "multi": false,
         "name": "Volume",
-        "options": [
-          {
-            "selected": false,
-            "text": "pvc-4282dd8e-e439-45a9-83bd-7922b679de42",
-            "value": "pvc-4282dd8e-e439-45a9-83bd-7922b679de42"
-          },
-          {
-            "selected": false,
-            "text": "pvc-e31918d7-7e09-4e1f-972d-6b2d861533d9",
-            "value": "pvc-e31918d7-7e09-4e1f-972d-6b2d861533d9"
-          },
-          {
-            "selected": true,
-            "text": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3",
-            "value": "pvc-276bcd94-e16e-4cdd-bfca-2b25f5aa18c3"
-          }
-        ],
+        "options": [],
         "query": "label_values(openebs_replica_status{openebs_io_storage_pool_claim=\"$Pool\", openebs_io_cstor_pool=\"$Replica\"}, vol)",
         "refresh": 0,
         "regex": "",
