@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 8,
-  "iteration": 1582943260770,
+  "iteration": 1582944041623,
   "links": [],
   "panels": [
     {
@@ -1049,7 +1048,7 @@
         "datasource": "Prometheus",
         "definition": "label_values(openebs_pool_status, openebs_io_storage_pool_claim)",
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": null,
         "multi": false,
         "name": "Pool",
