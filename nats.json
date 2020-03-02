@@ -254,7 +254,7 @@
       "grid": {},
       "gridPos": {
         "h": 7,
-        "w": 6,
+        "w": 12,
         "x": 0,
         "y": 9
       },
@@ -289,18 +289,24 @@
       "targets": [
         {
           "expr": "gnatsd_varz_in_bytes",
-          "intervalFactor": 2,
-          "legendFormat": "{{kubernetes_pod_name}}",
+          "intervalFactor": 1,
+          "legendFormat": "RX: {{kubernetes_pod_name}}",
           "metric": "gnatsd_varz_in_bytes",
           "refId": "A",
           "step": 10
+        },
+        {
+          "expr": "gnatsd_varz_out_bytes",
+          "intervalFactor": 1,
+          "legendFormat": "TX: {{kubernetes_pod_name}}",
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Bytes In",
+      "title": "Network Throughput",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -351,8 +357,8 @@
       "grid": {},
       "gridPos": {
         "h": 7,
-        "w": 6,
-        "x": 6,
+        "w": 12,
+        "x": 12,
         "y": 9
       },
       "hiddenSeries": false,
@@ -391,208 +397,19 @@
           "metric": "gnatsd_varz_in_msgs",
           "refId": "A",
           "step": 10
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "NATS Msgs In",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
         },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "editable": true,
-      "error": false,
-      "fill": 1,
-      "fillGradient": 0,
-      "grid": {},
-      "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 12,
-        "y": 9
-      },
-      "hiddenSeries": false,
-      "id": 5,
-      "isNew": true,
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "gnatsd_varz_out_bytes",
-          "intervalFactor": 2,
-          "legendFormat": "{{kubernetes_pod_name}}",
-          "metric": "gnatsd_varz_out_bytes",
-          "refId": "A",
-          "step": 10
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Bytes Out",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "editable": true,
-      "error": false,
-      "fill": 1,
-      "fillGradient": 0,
-      "grid": {},
-      "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 18,
-        "y": 9
-      },
-      "hiddenSeries": false,
-      "id": 6,
-      "isNew": true,
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
         {
           "expr": "gnatsd_varz_out_msgs",
           "intervalFactor": 2,
           "legendFormat": "{{kubernetes_pod_name}}",
-          "metric": "gnatsd_varz_out_msgs",
-          "refId": "A",
-          "step": 10
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "NATS Msgs Out",
+      "title": "Message Throughput",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -976,5 +793,5 @@
   "timezone": "browser",
   "title": "NATS Server",
   "uid": "9FNFc1_Zk",
-  "version": 3
+  "version": 4
 }
