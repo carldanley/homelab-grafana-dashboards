@@ -105,6 +105,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "decimals": 0,
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -144,14 +145,14 @@
           "expr": "drone_running_jobs",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "{{provider}}",
+          "legendFormat": "Running",
           "refId": "A"
         },
         {
           "expr": "drone_pending_jobs",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "{{provider}}",
+          "legendFormat": "Pending",
           "refId": "B"
         }
       ],
@@ -176,7 +177,7 @@
       "yaxes": [
         {
           "decimals": 0,
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -184,12 +185,12 @@
           "show": true
         },
         {
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -203,6 +204,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
+      "decimals": 0,
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -242,14 +244,14 @@
           "expr": "drone_running_builds",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "",
+          "legendFormat": "Running",
           "refId": "A"
         },
         {
           "expr": "drone_pending_builds",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "",
+          "legendFormat": "Pending",
           "refId": "B"
         }
       ],
@@ -274,7 +276,7 @@
       "yaxes": [
         {
           "decimals": 0,
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -287,7 +289,7 @@
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -756,7 +758,7 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -787,5 +789,5 @@
   "timezone": "",
   "title": "Drone CI",
   "uid": "IT4-bnNik",
-  "version": 5
+  "version": 6
 }
