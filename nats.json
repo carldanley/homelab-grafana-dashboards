@@ -757,7 +757,10 @@
   "refresh": "5s",
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "NATS",
+    "Events"
+  ],
   "templating": {
     "list": []
   },
@@ -793,5 +796,5 @@
   "timezone": "browser",
   "title": "NATS Server",
   "uid": "9FNFc1_Zk",
-  "version": 4
+  "version": 5
 }
