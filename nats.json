@@ -288,7 +288,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "gnatsd_varz_in_bytes",
+          "expr": "increase(gnatsd_varz_in_bytes[2m])",
           "intervalFactor": 1,
           "legendFormat": "RX: {{kubernetes_pod_name}}",
           "metric": "gnatsd_varz_in_bytes",
@@ -296,7 +296,7 @@
           "step": 10
         },
         {
-          "expr": "gnatsd_varz_out_bytes",
+          "expr": "increase(gnatsd_varz_out_bytes[2m])",
           "intervalFactor": 1,
           "legendFormat": "TX: {{kubernetes_pod_name}}",
           "refId": "B"
@@ -391,17 +391,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "gnatsd_varz_in_msgs",
-          "intervalFactor": 2,
-          "legendFormat": "{{kubernetes_pod_name}}",
+          "expr": "increase(gnatsd_varz_in_msgs[2m])",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "In: {{kubernetes_pod_name}}",
           "metric": "gnatsd_varz_in_msgs",
           "refId": "A",
           "step": 10
         },
         {
-          "expr": "gnatsd_varz_out_msgs",
-          "intervalFactor": 2,
-          "legendFormat": "{{kubernetes_pod_name}}",
+          "expr": "increase(gnatsd_varz_out_msgs[2m])",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "Out: {{kubernetes_pod_name}}",
           "refId": "B"
         }
       ],
@@ -796,5 +798,5 @@
   "timezone": "browser",
   "title": "NATS Server",
   "uid": "9FNFc1_Zk",
-  "version": 5
+  "version": 6
 }
