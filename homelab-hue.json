@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 17,
   "links": [],
   "panels": [
     {
@@ -160,7 +159,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(hue_cache_update_errors[1m])*60",
+          "expr": "rate(hue_cache_update_errors[20s])*20",
           "instant": false,
           "legendFormat": "{{kubernetes_pod_name}} - {{type}}",
           "refId": "A"
@@ -250,7 +249,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(hue_events_emitted[1m])*60",
+          "expr": "rate(hue_events_emitted[20s])*20",
           "intervalFactor": 1,
           "legendFormat": "{{event}}",
           "refId": "A"
@@ -605,7 +604,7 @@
         "current": true,
         "max": false,
         "min": false,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "total": false,
         "values": true
@@ -694,7 +693,7 @@
         "current": true,
         "max": false,
         "min": false,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "total": false,
         "values": true
@@ -783,7 +782,7 @@
         "current": true,
         "max": false,
         "min": false,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "total": false,
         "values": true
@@ -1080,5 +1079,5 @@
   "timezone": "",
   "title": "Homelab Hue",
   "uid": "-RhMZQlZk",
-  "version": 17
+  "version": 1
 }
