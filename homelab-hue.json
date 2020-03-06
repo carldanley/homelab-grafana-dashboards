@@ -136,6 +136,7 @@
       "legend": {
         "avg": false,
         "current": false,
+        "hideEmpty": false,
         "max": false,
         "min": false,
         "rightSide": false,
@@ -159,7 +160,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "max(hue_cache_update_errors) by (type, kubernetes_pod_name)",
+          "expr": "rate(hue_cache_update_errors[1m])*60",
+          "instant": false,
           "legendFormat": "{{kubernetes_pod_name}} - {{type}}",
           "refId": "A"
         }
@@ -184,6 +186,7 @@
       },
       "yaxes": [
         {
+          "decimals": null,
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -353,7 +356,7 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": true,
+      "stack": false,
       "steppedLine": false,
       "targets": [
         {
@@ -1077,5 +1080,5 @@
   "timezone": "",
   "title": "Homelab Hue",
   "uid": "-RhMZQlZk",
-  "version": 16
+  "version": 17
 }
