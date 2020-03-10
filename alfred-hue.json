@@ -1257,14 +1257,14 @@
   "schemaVersion": 22,
   "style": "dark",
   "tags": [
-    "Homelab",
+    "Alfred",
     "Hue"
   ],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -1282,7 +1282,7 @@
     ]
   },
   "timezone": "",
-  "title": "Homelab Hue",
+  "title": "Alfred Hue",
   "uid": "-RhMZQlZk",
   "version": 1
 }
