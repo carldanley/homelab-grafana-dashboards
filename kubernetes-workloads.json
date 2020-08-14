@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 16,
-  "iteration": 1597377440756,
+  "iteration": 1597377440822,
   "links": [],
   "panels": [
     {
@@ -105,7 +105,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Current Usage",
+      "title": "Utilization",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -158,7 +158,7 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 7,
-        "w": 11,
+        "w": 12,
         "x": 12,
         "y": 2
       },
@@ -396,7 +396,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 3,
         "x": 12,
         "y": 9
       },
@@ -452,8 +452,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 16,
+        "w": 3,
+        "x": 15,
         "y": 9
       },
       "id": 14,
@@ -488,7 +488,9 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "custom": {
+            "align": null
+          },
           "decimals": 2,
           "mappings": [],
           "min": 0,
@@ -516,15 +518,12 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 3,
-        "x": 20,
+        "w": 6,
+        "x": 18,
         "y": 9
       },
       "id": 16,
       "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -532,7 +531,9 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
       },
       "pluginVersion": "7.0.3",
       "targets": [
@@ -545,8 +546,8 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Current Usage",
-      "type": "stat"
+      "title": "Limit Utilization",
+      "type": "gauge"
     },
     {
       "datasource": null,
@@ -575,7 +576,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 3,
         "x": 12,
         "y": 12
       },
@@ -630,8 +631,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 16,
+        "w": 3,
+        "x": 15,
         "y": 12
       },
       "id": 15,
@@ -734,7 +735,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Current Usage",
+      "title": "Utilization",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -805,7 +806,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 3,
         "x": 12,
         "y": 16
       },
@@ -861,8 +862,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 16,
+        "w": 3,
+        "x": 15,
         "y": 16
       },
       "id": 24,
@@ -925,15 +926,12 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 3,
-        "x": 20,
+        "w": 6,
+        "x": 18,
         "y": 16
       },
       "id": 26,
       "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -941,7 +939,9 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
       },
       "pluginVersion": "7.0.3",
       "targets": [
@@ -954,8 +954,8 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Current Usage",
-      "type": "stat"
+      "title": "Limit Utilization",
+      "type": "gauge"
     },
     {
       "datasource": null,
@@ -991,7 +991,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 3,
         "x": 12,
         "y": 19
       },
@@ -1047,8 +1047,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
-        "x": 16,
+        "w": 3,
+        "x": 15,
         "y": 19
       },
       "id": 25,
@@ -1078,20 +1078,338 @@
       "timeShift": null,
       "title": "Memory Limits",
       "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 28,
+      "panels": [],
+      "title": "Network",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "hiddenSeries": false,
+      "id": 30,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(container_network_receive_bytes_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "RX ({{ pod }})",
+          "refId": "A"
+        },
+        {
+          "expr": "0-rate(container_network_transmit_bytes_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "TX ({{ pod }})",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Utilization",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 31
+      },
+      "hiddenSeries": false,
+      "id": 31,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(container_network_receive_packets_dropped_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "RX ({{ pod }})",
+          "refId": "A"
+        },
+        {
+          "expr": "0-rate(container_network_transmit_packets_dropped_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "TX ({{ pod }})",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Packets Dropped",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 31
+      },
+      "hiddenSeries": false,
+      "id": 32,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(container_network_receive_errors_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "RX ({{ pod }})",
+          "refId": "A"
+        },
+        {
+          "expr": "0-rate(container_network_transmit_errors_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m])",
+          "interval": "",
+          "legendFormat": "TX ({{ pod }})",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Packet Errors",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": "10s",
   "schemaVersion": 25,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "kubernetes",
+    "workloads",
+    "k8s"
+  ],
   "templating": {
     "list": [
       {
         "allValue": ".*",
         "current": {
           "selected": false,
-          "text": "load-balancer",
-          "value": "load-balancer"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": "Prometheus",
         "definition": "label_values(kube_pod_info, namespace)",
@@ -1212,5 +1530,5 @@
   "timezone": "browser",
   "title": "Kubernetes Workloads",
   "uid": "3x02mUIMz",
-  "version": 8
+  "version": 10
 }
