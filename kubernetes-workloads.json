@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 16,
-  "iteration": 1597377440822,
+  "iteration": 1597379757084,
   "links": [],
   "panels": [
     {
@@ -27,20 +27,6 @@
         "w": 24,
         "x": 0,
         "y": 0
-      },
-      "id": 2,
-      "panels": [],
-      "title": "Quick View",
-      "type": "row"
-    },
-    {
-      "collapsed": false,
-      "datasource": null,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 1
       },
       "id": 6,
       "panels": [],
@@ -65,7 +51,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 2
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 4,
@@ -160,7 +146,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 2
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 8,
@@ -268,7 +254,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 12,
@@ -398,7 +384,7 @@
         "h": 3,
         "w": 3,
         "x": 12,
-        "y": 9
+        "y": 8
       },
       "id": 18,
       "options": {
@@ -454,7 +440,7 @@
         "h": 3,
         "w": 3,
         "x": 15,
-        "y": 9
+        "y": 8
       },
       "id": 14,
       "options": {
@@ -520,7 +506,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 9
+        "y": 8
       },
       "id": 16,
       "options": {
@@ -578,7 +564,7 @@
         "h": 3,
         "w": 3,
         "x": 12,
-        "y": 12
+        "y": 11
       },
       "id": 19,
       "options": {
@@ -633,7 +619,7 @@
         "h": 3,
         "w": 3,
         "x": 15,
-        "y": 12
+        "y": 11
       },
       "id": 15,
       "options": {
@@ -670,7 +656,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 14
       },
       "id": 10,
       "panels": [],
@@ -695,7 +681,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 15
       },
       "hiddenSeries": false,
       "id": 21,
@@ -808,7 +794,7 @@
         "h": 3,
         "w": 3,
         "x": 12,
-        "y": 16
+        "y": 15
       },
       "id": 22,
       "options": {
@@ -864,7 +850,7 @@
         "h": 3,
         "w": 3,
         "x": 15,
-        "y": 16
+        "y": 15
       },
       "id": 24,
       "options": {
@@ -928,7 +914,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 16
+        "y": 15
       },
       "id": 26,
       "options": {
@@ -993,7 +979,7 @@
         "h": 3,
         "w": 3,
         "x": 12,
-        "y": 19
+        "y": 18
       },
       "id": 23,
       "options": {
@@ -1049,7 +1035,7 @@
         "h": 3,
         "w": 3,
         "x": 15,
-        "y": 19
+        "y": 18
       },
       "id": 25,
       "options": {
@@ -1086,7 +1072,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 22
+        "y": 21
       },
       "id": 28,
       "panels": [],
@@ -1108,10 +1094,10 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 8,
-        "w": 24,
+        "h": 6,
+        "w": 12,
         "x": 0,
-        "y": 23
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 30,
@@ -1156,7 +1142,107 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Utilization",
+      "title": "Pod Utilization",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 22
+      },
+      "hiddenSeries": false,
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(rate(container_network_receive_bytes_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m]))",
+          "interval": "",
+          "legendFormat": "RX",
+          "refId": "A"
+        },
+        {
+          "expr": "0-sum(rate(container_network_transmit_bytes_total{interface=\"eth0\", namespace=~\"$namespace\", pod=~\"$pod\", container=\"POD\"}[1m]))",
+          "interval": "",
+          "legendFormat": "TX",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Total Utilization",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1211,7 +1297,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 31
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 31,
@@ -1311,7 +1397,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 31
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 32,
@@ -1530,5 +1616,5 @@
   "timezone": "browser",
   "title": "Kubernetes Workloads",
   "uid": "3x02mUIMz",
-  "version": 10
+  "version": 12
 }
